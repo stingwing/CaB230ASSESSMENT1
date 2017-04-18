@@ -1,0 +1,115 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>input title</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+         <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    </head>
+    <body>
+        <!-- Nav Bar -->
+        <div class="top_bar">
+            <div id="backgroundNav"></div>
+            <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sign Up</button>
+            <button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Login</button>
+            <button class="button">About Us</button>  
+        </div>
+        <!-- Main Body -->
+        <div id="overallBackground">
+        
+        </div>
+        <div id="wrapperMainBody">
+            <div id="mainBody">
+                <!-- Replace this div with the MAP! -->
+                <div id="replaceThisMan">
+                    
+                </div>
+                <!-- -------------- -->
+                
+                <div id="bodyDetails">
+                    <h1 id="bodyContentH1">Pullenvale Park Road</h1>
+                    <h2 id="bodyContentH2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque risus nisl, hendrerit in tortor eget, dignissim ullamcorper leo. Vestibulum at ante ultrices, semper ex id, finibus enim. Morbi pulvinar vel velit eget malesuada. Fusce lacus dolor, dictum non nisl eget, molestie facilisis lectus. Nunc non facilisis justo. Phasellus scelerisque sapien id sapien euismod fermentum. Maecenas eros diam, elementum quis ipsum ac, dignissim ultrices dui. Maecenas tempus semper sollicitudin. Nullam vel.</h2>
+                    
+                </div>
+              
+                <div id="rateThisDiv">
+                    <div id="map"></div>
+                </div>
+                
+            </div>
+        </div>
+        <!-- stars -->
+        <div id="reviewWrapper">
+            <h3 id="reviewMain">Overall Rating</h3>
+            <h3 id="reviewSecondary">&#9734; &nbsp; &#9734; &nbsp; &#9734; &nbsp; &#9734; &nbsp; &#9734; &nbsp;</h3>
+        </div>
+        <div id="commentWrapper">
+            <h1 id="commentMainHeader">User Reviews</h1>
+            <h2>Swagman69  &nbsp;  &nbsp;  &nbsp;  &#9734; &nbsp; &#9734; &nbsp; &#9734; &nbsp; &#9734; &nbsp; &#9734; &nbsp;</h2>
+            <p>This Park is Dope yo</p>
+        </div>
+
+
+
+<div id="id01" class="modal">
+  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">×</span>
+  <form class="modal-content animate" action="/action_page.php">
+    <div class="container">
+      <label><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="email" required>
+
+      <label><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+
+      <label><b>Repeat Password</b></label>
+      <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+
+      <div class="clearfix">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+        <button type="submit" class="signupbtn">Sign Up</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+
+<div id="id02" class="modal">
+  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">×</span>
+  <form class="modal-content animate" action="/action_page.php">
+    <div class="container">
+      <label><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="email" required>
+
+      <label><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+
+        <div class="clearfix">
+        <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+        <button type="submit" class="signupbtn">Login</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+        
+        
+        
+        
+        <script>
+    function myMap() {
+        var mapCanvas = document.getElementById("map");
+
+        var mapOptions = {
+            center: new google.maps.LatLng(-27.455612, 153.023389), zoom: 10
+        };
+        var map = new google.maps.Map(mapCanvas, mapOptions);
+    }
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDg_b3lC32x3jzGuD_XnMgQkN8AtmhLREo&callback=myMap"></script>
+        
+        
+        
+        
+    </body>
+</html>

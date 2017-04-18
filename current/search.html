@@ -1,0 +1,126 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <title>Input Title for Website</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="css/main.css" media="screen" />
+                <!-- Font from Google Font! -->
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+        
+    </head>
+    <body>
+        <div class="top_bar">
+            <div id="backgroundNav"></div>
+           
+            
+            <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sign Up</button>
+            <button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Login</button>
+            
+            <button class="button">About Us</button>
+          
+            
+        </div>
+        <div id="wrapperMainBody">
+            
+            <div id="backgroundMainBody"></div>
+            <div id="backgroundMainImage"></div>
+
+            <div id="searchSection">
+
+
+                <h1 id="searchSecMainHeader">Welcome to MAPS!</h1>
+                <h2 id="searchSecSecondHeader">Search to find your PARK! </h2>
+                <form id="firstForm">
+                    <input type="text" placeholder="Search For Your Park ... " maxlength="30" id="mapSearch">
+                    <select name="kmNearest" id="selectNearest">
+                        <option value="five">5km</option>
+                        <option value="ten">10km</option>
+                        <option value="fifteen">15km</option>
+                    </select>
+                    <input type="submit" value="Search!" id="submitSearch">
+                </form>
+                <form id="formTwo">
+                    <select name="suburb" id="something">
+                        <option value="holder">Suburb</option>
+                        <option value="Kenmore">Kenmore</option>
+                        <option value="Cleveland">Cleveland</option>
+                        <option value="SunnyBank">SunnyBank</option>
+                    </select>
+                    <select name="suburb" id="rateThisScrub">
+                        <option value="rate">Review Rating</option>
+                        <option value="one">1 Star</option>
+                        <option value="two">2 Stars</option>
+                        <option value="three">3 Stars</option>
+                        <option value="four">4 Stars</option>
+                        <option value="five">5 Stars</option>
+                    </select>
+                </form>
+                <p id="subText">Clicking Search will use your current Location to find your nearest park!</p>
+                <div id="map" style="width:800px;%;height:400px;"></div>
+                <div id="border"></div>
+            </div>
+        </div>
+
+
+<div id="id01" class="modal">
+  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">×</span>
+  <form class="modal-content animate" action="/action_page.php">
+    <div class="container">
+      <label><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="email" required>
+
+      <label><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+
+      <label><b>Repeat Password</b></label>
+      <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+
+      <div class="clearfix">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+        <button type="submit" class="signupbtn">Sign Up</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+
+<div id="id02" class="modal">
+  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">×</span>
+  <form class="modal-content animate" action="/action_page.php">
+    <div class="container">
+      <label><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="email" required>
+
+      <label><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+
+        <div class="clearfix">
+        <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+        <button type="submit" class="signupbtn">Login</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+
+
+
+<script>
+function myMap() {
+      var mapCanvas = document.getElementById("map");
+
+      var mapOptions = {
+        center: new google.maps.LatLng(-27.455612, 153.023389), zoom: 10
+      };
+      var map = new google.maps.Map(mapCanvas, mapOptions);
+    
+
+}
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDg_b3lC32x3jzGuD_XnMgQkN8AtmhLREo&callback=myMap"></script>
+
+
+
+    </body>
+</html>
